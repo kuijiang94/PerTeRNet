@@ -1,8 +1,4 @@
-"""
-## Multi-Stage Progressive Image Restoration
-## Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, and Ling Shao
-## https://arxiv.org/abs/2102.02808
-"""
+
 
 import torch
 import torch.nn as nn
@@ -748,9 +744,9 @@ class SSNet(nn.Module):
         return recon_res+backgound_up
 		
 ##########################################################################
-class STRN(nn.Module):
+class PerTeRNet(nn.Module):
     def __init__(self, in_c=3, out_c=3, n_feat=64, kernel_size=3, reduction=4, num_cab=10, bias=False):
-        super(STRN, self).__init__()
+        super(PerTeRNet, self).__init__()
 
         act=nn.PReLU()
         self.dsnet = DSNet(n_feat, kernel_size, reduction, act, bias, num_cab)
