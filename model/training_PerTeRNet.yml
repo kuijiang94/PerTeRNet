@@ -8,8 +8,7 @@ VERBOSE: True
 
 MODEL:
   MODE: 'Deraining'
-  #SESSION: 'MPRNet'
-  SESSION: 'DANet'
+  SESSION: 'PerTeRNet'
 # Optimization arguments.
 OPTIM:
   BATCH_SIZE: 16
