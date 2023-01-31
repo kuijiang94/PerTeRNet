@@ -1,6 +1,6 @@
 import os
 from config import Config 
-opt = Config('training_DANet.yml')
+opt = Config('training_PerTeRNet.yml')
 
 gpus = ','.join([str(i) for i in opt.GPU])
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
@@ -22,7 +22,7 @@ import numpy as np
 
 import utils
 from data_RGB import get_training_data, get_validation_data
-from DANet import DANet
+from PerTeRNet import PerTeRNet
 
 
 import losses
@@ -31,9 +31,9 @@ from tqdm import tqdm
 from pdb import set_trace as stx
 
 
-file1 = 'DANet_PAR.txt'
-file2 = 'DANet_PSNR.txt'
-file3 = 'DANet_LOSS.txt'
+file1 = 'PerTeRNet_PAR.txt'
+file2 = 'PerTeRNet_PSNR.txt'
+file3 = 'PerTeRNet_LOSS.txt'
 ######### Set Seeds ###########
 random.seed(1234)
 np.random.seed(1234)
