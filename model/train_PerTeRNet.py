@@ -54,7 +54,7 @@ train_dir = opt.TRAINING.TRAIN_DIR
 val_dir   = opt.TRAINING.VAL_DIR
 
 ######### Model ###########
-model_restoration = DANet()
+model_restoration = PerTeRNet()
 model_restoration.cuda()
 
 device_ids = [i for i in range(torch.cuda.device_count())]
